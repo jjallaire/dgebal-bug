@@ -1,8 +1,9 @@
-library(expm)
+library(Rcpp)
+sourceCpp("sample.cpp")
 
+library(expm)
 foo <- matrix(1:9,3)
 expm(foo)
 
-Rcpp::sourceCpp("sample.cpp")
+sourceCpp("sample.cpp")
 expm(foo)
-
